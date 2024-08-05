@@ -1,6 +1,6 @@
 {
   "+rk2ZY": {
-    "defaultMessage": "Who will pay?"
+    "defaultMessage": "Kdo platí?"
   },
   "68bdoH": {
     "defaultMessage": "Petr Cibulka"
@@ -9,7 +9,7 @@
     "defaultMessage": "Určit znovu"
   },
   "LdrDno": {
-    "defaultMessage": "Made with love by {link}"
+    "defaultMessage": "S láskou od {link}"
   },
   "OpqpJG": {
     "defaultMessage": "{ name } bude platit!"
@@ -18,7 +18,7 @@
     "defaultMessage": "Česky"
   },
   "anRJoy": {
-    "defaultMessage": "Who will pay for the lunch? Bet with friends"
+    "defaultMessage": "Kdo platí za oběd? Vsaďte se s kolegy."
   },
   "bcMDGy": {
     "defaultMessage": "WhoPays.io"
@@ -27,10 +27,10 @@
     "defaultMessage": "Zjistit"
   },
   "fqmz9d": {
-    "defaultMessage": "Add more"
+    "defaultMessage": "Přidat"
   },
   "p0eVbU": {
-    "defaultMessage": "Deciding ..."
+    "defaultMessage": "Rozhoduje se ..."
   },
   "zLvP2O": {
     "defaultMessage": "Který člověk z { value } bude platit?"

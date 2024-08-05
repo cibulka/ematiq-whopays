@@ -12,7 +12,7 @@ export function appReducer(state: AppContextValue, action: AppAction): AppContex
       if (state.people.length + 1 > countMax) return state;
       return {
         ...state,
-        people: [...state.people, action.payload],
+        people: [action.payload, ...state.people],
       };
     }
     case AppActionType.HYDRATE: {
