@@ -44,6 +44,8 @@ export default async function Layout({ children, params: { locale } }: ParamsWit
         <footer className="flex justify-center mb-4 gap-1 text-sm">
           <span>
             {formatMessage(messages.footer, {
+              // TODO: Fix this TS error
+              // @ts-expect-error react-intl should accept elements
               link: (
                 <a className="underline" href="/">
                   {formatMessage(messages.name)}
