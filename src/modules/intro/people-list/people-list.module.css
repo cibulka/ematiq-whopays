@@ -4,11 +4,6 @@
   @apply border-neutral-300;
 }
 
-.list {
-  overflow: auto;
-  max-height: 100%;
-}
-
 .list li:not(.bg-white):nth-child(odd) {
   @apply bg-neutral-300;
 }

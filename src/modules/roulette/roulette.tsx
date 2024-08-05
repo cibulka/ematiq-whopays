@@ -1,7 +1,8 @@
-import Confetti from "react-confetti";
 import { useIntl } from "react-intl";
 
 import { useAppContext } from "@/context";
+
+import { Confetti } from "./confetti";
 import { messages } from "./messages";
 import { Progress } from "./progress";
 import { ResetButton } from "./reset-button";

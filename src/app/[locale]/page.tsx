@@ -7,7 +7,7 @@ import { AppSkeleton } from "@/modules/skeleton";
 
 export default function Home() {
   const {
-    state: { loaded, people, selectedIndex, suspense },
+    state: { loaded, people, selectedIndex },
   } = useAppContext();
 
   const person = loaded && typeof selectedIndex === "number" ? people[selectedIndex] : undefined;

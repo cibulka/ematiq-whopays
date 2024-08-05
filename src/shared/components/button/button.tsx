@@ -1,5 +1,6 @@
 import { PropsWithChildren, ReactNode } from "react";
-import { Spinner } from "../spinner";
+
+import { Spinner } from "@/shared/components/spinner";
 
 type ButtonProps = PropsWithChildren<{
   className?: string;

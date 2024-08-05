@@ -1,31 +1,36 @@
-import { FormEvent, useCallback } from "react";
+import { FormEvent, useCallback, useRef } from "react";
 import { useIntl } from "react-intl";
 
 import { useAppCallbacks } from "@/context";
-
 import { IconCheck } from "@/icons/IconCheck";
 import { IconError } from "@/icons/IconError";
 import { IconPlus } from "@/icons/IconPlus";
+
+import { messages } from "./messages";
 import { useInput } from "./use-input";
 
 export function PeopleListAddMore() {
-  const intl = useIntl();
+  const { formatMessage } = useIntl();
   const { onAddPerson } = useAppCallbacks();
 
-  const { currentValue, isFocus, isInvalid, onBlur, onChange, onFocus } = useInput({ initialValue: "" });
+  const inputRef = useRef<HTMLInputElement>(null);
+  const { clear, currentValue, isFocus, isInvalid, onBlur, onChange, onFocus } = useInput({ initialValue: "" });
 
   const onSubmit = useCallback(
     (event: FormEvent) => {
       event.preventDefault();
-      if (!isInvalid) onAddPerson?.(currentValue);
+      if (!isInvalid && currentValue) {
+        onAddPerson?.(currentValue);
+        clear();
+        inputRef.current?.focus();
+      }
     },
-    [currentValue, isInvalid]
+    [clear, currentValue, isInvalid, onAddPerson]
   );
 
   return (
     <form
       onSubmit={onSubmit}
-      aria-invalid={isInvalid}
       className={[
         "sticky bottom-4",
         "flex w-full gap-1 items-center justify-between",
@@ -44,16 +49,17 @@ export function PeopleListAddMore() {
       <input
         type="text"
         className="sticky bottom-0 w-full py-2 px-1 focus:outline-none"
-        placeholder="Add more"
+        placeholder={formatMessage(messages.placeholder)}
         value={currentValue}
         onBlur={onBlur}
         onChange={onChange}
         onFocus={onFocus}
+        ref={inputRef}
       />
       <button
-        className={["w-6 h-6", isInvalid ? "opacity-50" : "opacity-100"].filter(Boolean).join(" ")}
+        className={["w-6 h-6", isInvalid || !currentValue ? "opacity-50" : "opacity-100"].filter(Boolean).join(" ")}
         type="submit"
-        disabled={isInvalid}
+        disabled={isInvalid || !currentValue}
       >
         <IconPlus className="text-blue-500" />
       </button>

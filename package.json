@@ -20,7 +20,8 @@
     "react-confetti": "^6.1.0",
     "react-dom": "^18",
     "react-intl": "^6.6.8",
-    "react-range": "^1.9.2"
+    "react-range": "^1.9.2",
+    "react-use": "^17.5.1"
   },
   "devDependencies": {
     "@formatjs/cli": "^6.2.12",

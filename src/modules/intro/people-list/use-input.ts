@@ -1,6 +1,7 @@
+import { useCallback, useState } from "react";
+
 import { useAppContext } from "@/context";
 import { maxNameLength } from "@/shared/constants/app";
-import { useCallback, useState } from "react";
 
 type UseInputProps = {
   initialValue: string;
@@ -33,5 +34,7 @@ export function useInput({ initialValue }: UseInputProps) {
     setIsFocus(true);
   }, []);
 
-  return { currentValue, isFocus, onBlur, onChange, onFocus, isInvalid };
+  const clear = useCallback(() => setCurrentValue(""), []);
+
+  return { clear, currentValue, isFocus, onBlur, onChange, onFocus, isInvalid };
 }

@@ -1,9 +1,10 @@
-import { IconError } from "@/icons/IconError";
+import { FormEvent, useCallback } from "react";
 
 import { useAppCallbacks } from "@/context";
 import { IconCheck } from "@/icons/IconCheck";
+import { IconError } from "@/icons/IconError";
 import { IconSubmit } from "@/icons/IconSubmit";
-import { FormEvent, useCallback } from "react";
+
 import { useInput } from "./use-input";
 
 type PeopleListItemProps = {
@@ -14,7 +15,7 @@ type PeopleListItemProps = {
 export function PeopleItemEdit({ onClose, value }: PeopleListItemProps) {
   const { onRenamePerson } = useAppCallbacks();
 
-  const { currentValue, isInvalid, onChange, onFocus } = useInput({ initialValue: value });
+  const { currentValue, isInvalid, onBlur, onChange, onFocus } = useInput({ initialValue: value });
 
   const onSubmit = useCallback(
     (event: FormEvent) => {
@@ -29,7 +30,6 @@ export function PeopleItemEdit({ onClose, value }: PeopleListItemProps) {
   return (
     <form
       onSubmit={onSubmit}
-      aria-invalid={isInvalid}
       className={["flex w-full gap-1 items-center justify-between", "px-2 bg-white", "border-b-2 border-blue-500"].join(
         " "
       )}
@@ -44,7 +44,6 @@ export function PeopleItemEdit({ onClose, value }: PeopleListItemProps) {
         autoCapitalize="words"
         value={currentValue}
         onChange={onChange}
-        onBlur={onClose}
         onFocus={onFocus}
       />
       <button

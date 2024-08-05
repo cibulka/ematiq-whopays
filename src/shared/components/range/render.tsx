@@ -1,6 +1,6 @@
 import { PropsWithChildren } from "react";
-
 import type { IThumbProps, ITrackProps } from "react-range/lib/types";
+
 import { TrackLine } from "./track-line";
 
 export function renderTrack({ props, children, scale }: PropsWithChildren<{ props: ITrackProps; scale: number }>) {

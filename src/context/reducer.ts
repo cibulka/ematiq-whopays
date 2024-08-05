@@ -1,6 +1,7 @@
 import { countMax, countMin, nicknames } from "@/shared/constants/app";
 import { LOCAL_STORAGE_KEY } from "@/shared/constants/local-storage";
 import { getRandomIndex } from "@/shared/utils/get-random";
+
 import { AppAction, AppActionType } from "./action-types";
 import { initialState } from "./constants";
 import { AppContextValue } from "./types";

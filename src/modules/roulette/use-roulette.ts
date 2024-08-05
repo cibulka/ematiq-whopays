@@ -1,7 +1,8 @@
+import { useCallback, useEffect, useRef, useState } from "react";
+
 import { useAppContext } from "@/context";
 import { AppActionType } from "@/context/action-types";
 import { getRandomValue } from "@/shared/utils/get-random";
-import { useCallback, useEffect, useRef, useState } from "react";
 
 type UseRouletteProps = {
   values: string[];

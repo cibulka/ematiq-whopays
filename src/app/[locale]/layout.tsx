@@ -47,7 +47,7 @@ export default async function Layout({ children, params: { locale } }: ParamsWit
               // TODO: Fix this TS error
               // @ts-expect-error react-intl should accept elements
               link: (
-                <a className="underline" href="/">
+                <a className="underline" href="/" key="link">
                   {formatMessage(messages.name)}
                 </a>
               ),

@@ -26,25 +26,23 @@ export function PeopleList() {
   return (
     <div className={["flex flex-1 flex-col", "w-full max-w-sm mt-4"].join(" ")}>
       <div className={styles.content}>
-        <div className={styles.list}>
-          <ul className={styles.list}>
-            {people.map((name) => {
-              const isEdited = name === edited;
-              return (
-                <li className="flex items-center justify-between gap-4" key={name}>
-                  {isEdited ? (
-                    <PeopleItemEdit onClose={onEditClose} value={name} />
-                  ) : (
-                    <>
-                      <PeopleListView onEdit={setEdited} value={name} />
-                      {canDelete && <PeopleListDelete value={name} />}
-                    </>
-                  )}
-                </li>
-              );
-            })}
-          </ul>
-        </div>
+        <ul className={styles.list}>
+          {people.map((name) => {
+            const isEdited = name === edited;
+            return (
+              <li className="flex items-center justify-between gap-4" key={name}>
+                {isEdited ? (
+                  <PeopleItemEdit onClose={onEditClose} value={name} />
+                ) : (
+                  <>
+                    <PeopleListView onEdit={setEdited} value={name} />
+                    {canDelete && <PeopleListDelete value={name} />}
+                  </>
+                )}
+              </li>
+            );
+          })}
+        </ul>
         {!edited && canAdd && <PeopleListAddMore />}
       </div>
     </div>

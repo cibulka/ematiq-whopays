@@ -1,5 +1,6 @@
-import { IconPen } from "@/icons/IconPen";
 import { useCallback } from "react";
+
+import { IconPen } from "@/icons/IconPen";
 
 type PeopleListViewProps = {
   value: string;

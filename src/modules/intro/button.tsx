@@ -1,9 +1,9 @@
 import { useIntl } from "react-intl";
 
+import { useAppContext } from "@/context";
 import { useAppCallbacks } from "@/context/callbacks";
 import { Button } from "@/shared/components/button";
 
-import { useAppContext } from "@/context";
 import { messages } from "./messages";
 
 export function IntroButton() {

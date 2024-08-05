@@ -1,4 +1,5 @@
 import { useAppContext } from "@/context";
+
 import styles from "./progress.module.css";
 
 export function Progress() {

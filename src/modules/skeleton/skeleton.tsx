@@ -2,6 +2,7 @@ import { useIntl } from "react-intl";
 
 import { Button } from "@/shared/components/button";
 import { Title } from "@/shared/components/title";
+
 import { messages } from "./messages";
 
 export function AppSkeleton() {
