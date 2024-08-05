@@ -3,24 +3,40 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "concurrently --raw \"next dev\" \"npm run watch:i18n:extract\" \"npm run watch:i18n:compile\"",
+    "prebuild": "npm run i18n:extract && npm run i18n:compile",
     "build": "next build",
+    "i18n:extract": "tsx lib/scripts/i18n/extract.ts",
+    "i18n:compile": "tsx lib/scripts/i18n/compile.ts",
+    "watch:i18n:extract": "nodemon -q --watch 'messages.ts' --exec 'npm run i18n:extract'",
+    "watch:i18n:compile": "nodemon -q --watch 'messages/*.json' --exec 'npm run i18n:compile'",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "next": "14.2.5",
+    "next-i18n-router": "^5.5.1",
     "react": "^18",
+    "react-confetti": "^6.1.0",
     "react-dom": "^18",
-    "next": "14.2.5"
+    "react-intl": "^6.6.8",
+    "react-range": "^1.9.2"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@formatjs/cli": "^6.2.12",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "concurrently": "^8.2.2",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.5",
+    "eslint-plugin-formatjs": "^4.13.3",
+    "execa": "^9.3.0",
+    "nodemon": "^3.1.4",
+    "ora": "^8.0.1",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.5"
+    "tsx": "^4.16.5",
+    "typescript": "^5"
   }
 }

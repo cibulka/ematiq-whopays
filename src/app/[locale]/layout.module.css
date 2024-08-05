@@ -1,0 +1,3 @@
+.layout_content > * {
+  @apply flex-shrink-0;
+}

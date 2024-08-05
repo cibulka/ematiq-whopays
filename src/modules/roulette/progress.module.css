@@ -1,0 +1,24 @@
+@keyframes grow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.progress {
+  @apply flex;
+}
+
+.progress:before {
+  content: "";
+  @apply absolute top-1/2 left-0 w-full;
+  @apply h-2 -mt-1;
+  @apply bg-red-300 rounded-md;
+  @apply origin-top-left;
+}
+
+.progress-animated:before {
+  animation: grow 3s linear;
+}

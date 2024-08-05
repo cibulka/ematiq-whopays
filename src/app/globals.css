@@ -2,32 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html,
+body {
+  @apply flex flex-col w-full h-full;
+  @apply bg-neutral-200 text-neutral-800;
+  font-size: 16px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@media screen(sm) {
+  html {
+    font-size: 18px;
+  }
+}
+@media screen(md) {
+  html {
+    font-size: 20px;
+  }
+}
+@media screen(lg) {
+  html {
+    font-size: 22px;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply text-base;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+svg {
+  @apply block fill-current;
 }
