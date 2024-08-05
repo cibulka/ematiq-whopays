@@ -13,4 +13,8 @@ export const messages = defineMessages({
     defaultMessage: "See who pays",
     id: "e44R3j",
   },
+  range: {
+    defaultMessage: "Select number of users",
+    id: "bfcn5n",
+  },
 });

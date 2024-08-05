@@ -20,7 +20,7 @@ export function Button(props: ButtonProps) {
         props.className,
         "flex justify-center gap-2 w-60",
         "px-4 py-2",
-        "rounded-md bg-red-500 text-white",
+        "rounded-md bg-red-600 text-white",
         "text-lg font-bold",
         props.loading && "opacity-50",
       ]

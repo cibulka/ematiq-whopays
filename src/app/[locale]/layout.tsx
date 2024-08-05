@@ -25,7 +25,7 @@ export default async function Layout({ children, params: { locale } }: ParamsWit
       <div className="flex flex-1 flex-col">
         <nav className="flex items-center justify-between p-4">
           <div className="flex items-center gap-2">
-            <IconLogo className="w-8 h-8 text-red-500 -mt-1" />
+            <IconLogo className="w-8 h-8 text-red-600 -mt-1" />
             <h1 className="font-bold">{formatMessage(messages.title)}</h1>
           </div>
           <LocaleSelect locale={locale} />

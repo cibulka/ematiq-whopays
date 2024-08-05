@@ -39,11 +39,12 @@ export function PeopleListAddMore() {
       ].join(" ")}
     >
       <button
+        aria-label={isInvalid ? formatMessage(messages.invalid) : formatMessage(messages.valid)}
         className={["w-6 h-6", currentValue ? "opacity-100" : "opacity-0"].filter(Boolean).join(" ")}
         type="submit"
         disabled={isInvalid}
       >
-        {isInvalid ? <IconError className="text-red-500" /> : <IconCheck className="text-emerald-500" />}
+        {isInvalid ? <IconError className="text-red-600" /> : <IconCheck className="text-emerald-500" />}
       </button>
 
       <input
@@ -57,6 +58,7 @@ export function PeopleListAddMore() {
         ref={inputRef}
       />
       <button
+        aria-label={formatMessage(messages.add)}
         className={["w-6 h-6", isInvalid || !currentValue ? "opacity-50" : "opacity-100"].filter(Boolean).join(" ")}
         type="submit"
         disabled={isInvalid || !currentValue}

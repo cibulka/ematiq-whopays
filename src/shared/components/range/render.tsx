@@ -7,21 +7,22 @@ export function renderTrack({ props, children, scale }: PropsWithChildren<{ prop
   return (
     <div {...props} className="relative flex flex-1 items-center h-10" style={props.style}>
       <TrackLine className="bg-neutral-300" />
-      {typeof scale === "number" && <TrackLine className="opacity-70 bg-red-500" scale={scale} />}
+      {typeof scale === "number" && <TrackLine className="opacity-70 bg-red-600" scale={scale} />}
       {children}
     </div>
   );
 }
 
-export function renderThumb({ props }: { props: IThumbProps }) {
+export function renderThumb({ props, label }: { props: IThumbProps; label: string | undefined }) {
   return (
     <div
       {...props}
+      aria-label={label}
       className={["w-10 h-10 flex items-center justify-center"].join(" ")}
       key={props.key}
       style={props.style}
     >
-      <div className="w-4 h-4 rounded-full bg-red-500" />
+      <div className="w-4 h-4 rounded-full bg-red-600" />
     </div>
   );
 }

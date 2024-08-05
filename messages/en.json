@@ -2,11 +2,23 @@
   "+rk2ZY": {
     "defaultMessage": "Who will pay?"
   },
+  "2/2yg+": {
+    "defaultMessage": "Add"
+  },
   "68bdoH": {
     "defaultMessage": "Petr Cibulka"
   },
+  "89T/ze": {
+    "defaultMessage": "Invalid"
+  },
+  "BN5yXZ": {
+    "defaultMessage": "Valid"
+  },
   "EnSuAt": {
     "defaultMessage": "Decide again"
+  },
+  "K3r6DQ": {
+    "defaultMessage": "Delete"
   },
   "LdrDno": {
     "defaultMessage": "Made with love by {link}"
@@ -23,6 +35,9 @@
   "bcMDGy": {
     "defaultMessage": "WhoPays.io"
   },
+  "bfcn5n": {
+    "defaultMessage": "Select number of users"
+  },
   "e44R3j": {
     "defaultMessage": "See who pays"
   },
@@ -31,6 +46,9 @@
   },
   "p0eVbU": {
     "defaultMessage": "Deciding ..."
+  },
+  "wEQDC6": {
+    "defaultMessage": "Edit"
   },
   "zLvP2O": {
     "defaultMessage": "Which person of { value } will pay?"

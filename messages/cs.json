@@ -2,11 +2,23 @@
   "+rk2ZY": {
     "defaultMessage": "Kdo platí?"
   },
+  "2/2yg+": {
+    "defaultMessage": "Add"
+  },
   "68bdoH": {
     "defaultMessage": "Petr Cibulka"
   },
+  "89T/ze": {
+    "defaultMessage": "Invalid"
+  },
+  "BN5yXZ": {
+    "defaultMessage": "Valid"
+  },
   "EnSuAt": {
     "defaultMessage": "Určit znovu"
+  },
+  "K3r6DQ": {
+    "defaultMessage": "Delete"
   },
   "LdrDno": {
     "defaultMessage": "S láskou od {link}"
@@ -23,6 +35,9 @@
   "bcMDGy": {
     "defaultMessage": "WhoPays.io"
   },
+  "bfcn5n": {
+    "defaultMessage": "Select number of users"
+  },
   "e44R3j": {
     "defaultMessage": "Zjistit"
   },
@@ -31,6 +46,9 @@
   },
   "p0eVbU": {
     "defaultMessage": "Rozhoduje se ..."
+  },
+  "wEQDC6": {
+    "defaultMessage": "Edit"
   },
   "zLvP2O": {
     "defaultMessage": "Který člověk z { value } bude platit?"
